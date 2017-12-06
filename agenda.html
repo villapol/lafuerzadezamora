@@ -1,0 +1,89 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+   
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+	<style>
+  @media screen and (max-width:675px){
+    #iframe{
+      min-height:1388px;
+      overflow-y: scroll !important;
+    }
+  }
+</style>
+	<script>
+function myFunction() {
+     window.AppInventor.setWebViewString("reset")
+}
+</script> 
+	</head>
+
+   <body onload="myFunction()">
+	
+
+	
+  <nav class="teal lighten-1">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav teal lighten-1" id="mobile-demo">
+	  <li><br><div class="row center"><img class="responsive-img" src="isotipopedraza.png"></div></li>
+        <li><b><a href="#" onclick="myInicio()" class="lime-text text-lighten-3">INICIO</a></b></li>
+        <li><b><a href="#" onclick="myPropuesta()" class="light-blue-text text-lighten-5">PEDRAZA ES ESPERANZA</a></b></li>
+		<li><b><a href="#"  onclick="myAgenda()" class="light-blue-text text-lighten-5">AGENDA</a></b></li>
+		<li><b><a href="#" onclick="myMensaje()" class="light-blue-text text-lighten-5">CONTACTO CON ALCIDES</a></b></li>
+	  <li><b><a href="#" onclick="myPedrazadia()" class="light-blue-text text-lighten-5">PEDRAZA AL DIA</a></b></li>
+	  </ul>
+    </div>
+        </nav>
+
+        <iframe id="iframe" name="agenda" src="http://flibi.net/alcides/agenda" scrolling="no" style="width:100%;height:734px;border:none;overflow:hidden;"></iframe>
+
+
+
+        
+        <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="materialize.min.js"></script>
+    
+     <script src="init.js"></script>
+     
+     
+
+<script>
+		 document.getElementById("demos").innerHTML = window.AppInventor.getWebViewString();
+        
+      function myInicio() {
+    window.AppInventor.setWebViewString("inicio")
+    }
+        
+		   function myPropuesta() {
+    window.AppInventor.setWebViewString("propuesta")
+    }
+	
+		   function myAgenda() {
+    window.AppInventor.setWebViewString("agenda")
+    }
+	
+	   function myMensaje() {
+    window.AppInventor.setWebViewString("mensaje")
+    }
+	   function myPedrazadia() {
+    window.AppInventor.setWebViewString("pedrazadia")
+    }
+	   function myMenea() {
+    window.AppInventor.setWebViewString("menea")
+    }	
+		
+	
+        
+        </script>
+     
+      </body>
+  </html>
